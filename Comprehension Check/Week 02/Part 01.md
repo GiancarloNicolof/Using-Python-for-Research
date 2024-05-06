@@ -26,3 +26,21 @@
     ```
     **Fill the `#blank#` to ensure this print `10`.**
     > `return n`
+
+- **Consider the following code:**
+    ```python
+    class NewList(list):
+        def remove_max(self):
+            self.remove(max(self))
+        def append_sum(self):
+            self.append(sum(self))
+
+    x = NewList([1,2,3])
+    while max(x) < 10:
+        x.remove_max()
+        x.append_sum()
+
+    print(x)
+    ```
+    **What will this print?**
+    > Nothing: this program will never halt.
