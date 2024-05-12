@@ -29,3 +29,18 @@
 
 - **What is the dimension of `numpy.sum(numpy.random.randint(1,7,(100,10)), axis=0)`?**
     > 10.
+
+- **Consider the following code:**
+    ```python
+    start_time = time.clock()
+    stop_time = time.clock()
+    stop_time - start_time
+    ```
+    What does this return?
+    > A `float` of the seconds between the two times.
+
+- **How are the displacements, the individual steps, in the random walk related to one another?**
+    > Any two consecutive displacements are independent of one another.
+
+- **What does `np.concatenate` do?**
+    > Takes an iterable of `np.arrays` as arguments, and binds them along the `axis` argument.
