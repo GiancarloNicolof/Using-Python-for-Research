@@ -12,7 +12,8 @@
 	G.add_nodes_from(1,2,3,4)
 	G.add_edges_from((1,2), (3,4))
 	G.number_of_nodes()
-	G.number_of_edges()```
+	G.number_of_edges()
+	```
 	What does this return?
 	> This code contains an error.
 
@@ -34,7 +35,8 @@
 - **Consider the following code:**
 	```python
 	D = {1:1, 2:2, 3:3}
-	plt.hist(D)```
+	plt.hist(D)
+	```
 	What will this plot?
 	> This code contains an error. (Answer is outdated. plt.hist works with dictionaries)
 
