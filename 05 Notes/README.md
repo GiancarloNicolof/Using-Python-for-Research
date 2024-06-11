@@ -9,10 +9,11 @@ A continuous probability distribution (means that can take any value within a sp
 + $\sigma$ (standard deviation): how spread out the numbers in a data set are around the mean of the set.
 ### Standard Deviation
 
-When we have the data for the entire group we’re interested in:
+When we have the data for the entire group we’re interested in:  
 $$
 \sigma = \sqrt{\frac{\sum(x_{1}-\mu)^2}{N}}
 $$
+
 + $x_i$ → each data point
 + $\mu$ → data points mean
 + $N$ → number of data points
@@ -34,7 +35,7 @@ $$
 ---
 ## Standard Normal Distribution
 
-![](./Images/normal_curve.png)
+<img src="Images/normal_curve.png" width="300">
 
 Normal distribution with 
 - $\mu = 0$
