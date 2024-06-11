@@ -13,7 +13,7 @@ When we have the data for the entire group we’re interested in:
 $$
 \sigma = \sqrt{\frac{\sum(x_{1}-\mu)^2}{N}}
 $$
-
+  
 + $x_i$ → each data point
 + $\mu$ → data points mean
 + $N$ → number of data points
@@ -35,7 +35,7 @@ $$
 ---
 ## Standard Normal Distribution
 
-<img src="Images/normal_curve.png" width="300">
+![Normal_curve|50](./Images/normal_curve.png)
 
 Normal distribution with 
 - $\mu = 0$
