@@ -10,8 +10,9 @@ A continuous probability distribution (means that can take any value within a sp
 ### Standard Deviation
 
 When we have the data for the entire group we’re interested in:  
+
 $$
-{\sigma} = \sqrt{\frac{\sum(x_{1}-\mu)^2}{N}}
+\sigma = \sqrt{\frac{\sum(x_{1}-\mu)^2}{N}}
 $$
   
 + $x_i$ → each data point
