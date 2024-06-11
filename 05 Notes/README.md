@@ -34,7 +34,7 @@ $$
 ---
 ## Standard Normal Distribution
 
-![Normal_curve|300](./Images/normal_curve.png)
+![Normal_curve|100](./Images/normal_curve.png)
 
 Normal distribution with 
 - $\mu = 0$
