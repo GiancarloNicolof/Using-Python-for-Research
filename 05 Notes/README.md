@@ -35,7 +35,7 @@ $$
 ---
 ## Standard Normal Distribution
 
-![Normal_curve|50](./Images/normal_curve.png)
+<img src="Images/normal_curve.png" width="300">
 
 Normal distribution with 
 - $\mu = 0$
