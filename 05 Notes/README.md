@@ -135,3 +135,44 @@ $$
 **Square Error Loss (MSE)** → The most common loss function for Regression problems. It measures the average squared difference between the actual (true) values and the predicted values by a model.
 
 **0-1 Loss function** → The most common loss function for Classification problems. For a given $x$, we calculate the probability of each class and we then assign the observation to the class with the highest probability.
+
+---
+## Simple Linear Regression
+
+Statistical technique used to understand the relationship between two continuous variables. It models the relationship between a dependent variable (response variable) and an independent variable (predictor variable) by fitting a linear equation to the observed data.
+
+$$
+Y = \beta_{0} + \beta_{1}X + \varepsilon
+$$
+
+- $Y$ and $X$ are random variables
+- $\beta_0$ → intercept (value of $Y$ when $X = 0$)
+- $\beta_1$ → slope (the change in $Y$ for a one-unit change in $X$)
+- $\epsilon$ → error term (difference between observed and predicted values of $Y$)
+
+Using training data, we can produce estimates $\hat{\beta_0}$ and $\hat{\beta_1}$ and predict future values of $y$.
+
+$$
+\hat{y} = \hat{\beta_{0}} + \hat{\beta_{1}}x + \varepsilon 
+$$
+
+The hats indicate they are estimated parameters (estimated using data).
+
+### Least Squared Criterion
+
+Used to find the best straight line that fits a set of data point in a graph.
+1. Looks at how far from the line each data point is.
+2. Squared the distances (to make them all positive) the sums them up.
+3. The best line is the one that makes the total (RSS) as small as possible.
+
+**Residual** → difference between the observed value ($y_i$) and predicted value ($\hat{y_i}$).
+
+$$
+e_{i}= y_{i} - \hat{y_{i}}
+$$
+
+**RSS (Residual Sum of Squares)**
+
+$$
+\text{RSS} = \sum_{i=1}^{n}(y_{i}-\hat{y_{i}})^2
+$$
