@@ -79,6 +79,7 @@ $$
 Divided into 2 groups based on their output:
 1. Quantitative output → **Regression Problem**
 2. Qualitative output → **Classification Problem**
+
 The input can be a mix of quantitative and qualitative data for both groups.
 
 ### Regression Setting
