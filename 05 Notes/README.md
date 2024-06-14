@@ -29,6 +29,7 @@ Describes the probability of a random variable of taking a particular value or f
 $$
 f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^-{\frac{(x-\mu)^2}{2\sigma^2}}
 $$
+
 - $\mu$ → mean of the distribution
 - $\sigma$ → standard deviation
 - $e$ → base of the natural logarithm
@@ -54,6 +55,7 @@ Represents how many standard deviations an element is from the mean.
 $$
 z = \frac{X-\mu}{\sigma}
 $$
+
 - $X$ → value from the data set
 
 ---
@@ -184,6 +186,7 @@ Represents the variability we would expect in the parameter estimates if we repe
 $$
 \hat{\beta_{1}} \pm 1.96 \times SE
 $$
+
 This gives the “95% confidence interval”, meaning 95% of the data in contained in this range.
 
 ### Total Sum of Squares (TSS)
@@ -195,7 +198,8 @@ TSS = \sum_{i=1}^n (y_{i} - \overline{y})^2
 $$
 
 - $y_i$ → observed value for the $i$-th observation.
-- $\overline{y}$ → mean of the observed values
+- $\overline{y}$ → mean of the observed values  
+  
 Represents the total variation in the dependent variable that needs to be explained by the model.
 
 ### Residual Sum of Squares (RSS)
@@ -208,6 +212,7 @@ $$
 
 - $y_i$ → observed value for the $i$-th observation.
 - $\hat{y_{i}}$ → predicted value for the $i$-th observation.
+
 Represents the portion of the total variability that the model fails to explain.
 
 ### Variance Explained (R-squared)
@@ -234,6 +239,7 @@ $$
 - $\beta_o$ → intercept
 - $\beta_1, \dots, \beta_p$ → coefficients for each independent variable
 - $\varepsilon$ → error term
+
 A unit change the value of $X_{k}$ is associated with a change $\hat{\beta_k}$ in the value of the outcome $y$, while keeping all other predictors fixed.
 
 ---
