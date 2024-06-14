@@ -171,8 +171,98 @@ $$
 e_{i}= y_{i} - \hat{y_{i}}
 $$
 
-**RSS (Residual Sum of Squares)**
+---
+## Sampling distribution of the parameter estimates
+
+Represents the variability we would expect in the parameter estimates if we repeat the same sampling process multiple times on the same population.
+1. If we take a sample from a population and calculate an estimate of a parameter, that estimate is rarely exactly equal to the true parameter value due to sample-to-sample variability.
+2. Calculating the parameter estimate each time from many random samples of the same size from the population, we obtain a distribution of calculated values.
+3. The sampling distribution describes how those sample estimates are distributed around the true parameter value in the population.
+
+**Standard Error (SE)** → It measures the dispersion of the sample statistic from the true parameter value in the population. It provides information about the precision of the estimate.
 
 $$
-\text{RSS} = \sum_{i=1}^{n}(y_{i}-\hat{y_{i}})^2
+\hat{\beta_{1}} \pm 1.96 \times SE
 $$
+This gives the “95% confidence interval”, meaning 95% of the data in contained in this range.
+
+### Total Sum of Squares (TSS)
+
+It quantifies the overall deviation of the observed values from their mean.
+
+$$
+TSS = \sum_{i=1}^n (y_{i} - \overline{y})^2
+$$
+
+- $y_i$ → observed value for the $i$-th observation.
+- $\overline{y}$ → mean of the observed values
+Represents the total variation in the dependent variable that needs to be explained by the model.
+
+### Residual Sum of Squares (RSS)
+
+It quantifies the deviation of the observed values from the predicted values.
+
+$$
+RSS = \sum_{i=1}^n (y_{i} - \hat{y_{i}})^2
+$$
+
+- $y_i$ → observed value for the $i$-th observation.
+- $\hat{y_{i}}$ → predicted value for the $i$-th observation.
+Represents the portion of the total variability that the model fails to explain.
+
+### Variance Explained (R-squared)
+
+Represents the proportion of the total variability that is explained by the model. It ranges from 0 to 1.
+
+$$
+R^2 = 1 - \frac{RSS}{TSS}
+$$
+
+If the model if useful, the RSS should be smaller than the TSS.
+
+---
+## Multiple Linear Regression
+
+Models the relationship between a single dependent variable and two or more independent variables.
+
+$$
+Y = \beta_{0} + \beta_{1} X_{1} + \dots + \beta_{p}X_{p} + \varepsilon
+$$
+
+- $Y$ → dependent variable
+- $X_1, \dots, X_p$ → independent variables
+- $\beta_o$ → intercept
+- $\beta_1, \dots, \beta_p$ → coefficients for each independent variable
+- $\varepsilon$ → error term
+A unit change the value of $X_{k}$ is associated with a change $\hat{\beta_k}$ in the value of the outcome $y$, while keeping all other predictors fixed.
+
+---
+## Mean Squared Error
+
+Common measure used to evaluate the accuracy of a predictive model.
+
+$$
+MSE = \frac{1}{n} \sum_{i=1}^n (y_{i} - \hat{y_{i}})^2
+$$
+
+A smaller MSE indicates a better fit of the model to the data. If we use the test dataset to make the measurements, we get the Test MSE.
+
+### Training Error Rate
+
+Proportion of errors the model makes on the training dataset.
+
+$$
+\text{Training Error Rate} = \frac{\text{Number of Incorrect Predictions on Training Data}}{\text{Total Number of Training Examples}}
+$$
+
+High training error rate indicates that the model has not learned the training data well. A very low training error rate could indicate overfitting, where the model performs well on training data but may not generalize well to new data.
+
+### Test Error Rate
+
+Proportion of errors the model makes on the test dataset, which consists of new, unseen data.
+
+$$
+\text{Test Error Rate} = \frac{\text{Number of Incorrect Predictions on Test Data}}{\text{Total Number of Test Examples}}
+$$
+
+A lower test error rate indicates better generalization performance.
