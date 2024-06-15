@@ -273,3 +273,36 @@ $$
 $$
 
 A lower test error rate indicates better generalization performance.
+
+---
+## Logistic Regression
+
+Statistical method used for binary classification problems, where the goal is to predict one of two possible outcomes.
+
+**Conditional class probabilities** → represent the probabilities of each class given the input features.
+
+If there are only two classes, usually we use `0` and `1` as labels, so the output $y$ is always either `0` or `1`.
+
+$$
+P(x) = P(y=1|x)
+$$
+
+The probability that $Y$ is equal to 1 given the value of $X$.
+If $Y$ is not equal to 1, it must be 0.
+
+$$
+P(y=0|x) = 1 - P(x)
+$$
+
+Using Linear Regression would give us probabilities that could be greater than 1 or less that 0, while with Logistic Regression the probability is constrained between 0 and 1. We can modify Linear Regression to make it work.
+
+$$
+\log \frac{P(x)}{1-P(x)} = \beta_{0} + \beta_{1} x_{1}
+$$
+
+Logistic Regression is a linear model that models probabilities on a non-linear scale.
+- $\frac{P(x)}{1-P(x)}$ → odds of that event. 
+
+Odds can go from 0 to $\infty$ (ratios of two never negative probabilities). $\log$ odds can vary from $-\infty$ to $+\infty$, so we can now use a linear model to model the left hand-side expression.
+
+If we add multiple predictors to the right hand-side of the expression, we get the **multiple logistic regression**. The coefficients in this case must be estimated from data, usually done using the method of maximum likelihood that finds parameter estimates that make the observed data maximally likely.
