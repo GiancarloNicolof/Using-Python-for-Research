@@ -306,3 +306,32 @@ Logistic Regression is a linear model that models probabilities on a non-linear 
 Odds can go from 0 to $\infty$ (ratios of two never negative probabilities). $\log$ odds can vary from $-\infty$ to $+\infty$, so we can now use a linear model to model the left hand-side expression.
 
 If we add multiple predictors to the right hand-side of the expression, we get the **multiple logistic regression**. The coefficients in this case must be estimated from data, usually done using the method of maximum likelihood that finds parameter estimates that make the observed data maximally likely.
+
+---
+## Tree-based Methods
+
+They involve dividing the predictor space into simpler regions using straight lines.
+We first divide the entire predictor space into two regions, then we divide these two smaller regions into yet smaller regions, and so on until we hit a stopping criteria.
+The goal is to find regions in the predictor space that are maximally homogeneous in terms of the outcome variable.
+
+To make prediction, we find the region where the test observation falls, and
+- **Regression setting** → we return the mean of the outcomes in that particular region.
+- **Classification setting** → we return the mode (the class) of that region.
+
+To make a split, all predictors and potential cut points are evaluated, and the split that minimizes a loss function (e.g., RSS for regression, Gini index or Cross-entropy for classification) is chosen. 
+
+The splitting lines must be aligned with the directions of the axes of the predictor space, meaning we can summarize the splitting rules in a tree.
+
+<img src="Images/tree.jpg" width="600">
+
+### Random Forest Method
+
+Based on 3 concepts:
+1. **Ensemble learning method** (combines the predictions of multiple models) that combines multiple decision trees to produce a more robust and accurate model. Each tree in the ensemble is trained on a different subset of the data and makes independent predictions.
+2. **Bootstrap Aggregating** (Bagging): involves creating multiple subsets of the original training data by sampling with replacement (implies that same observation can occur multiple times). Each subset is used to train a separate decision tree. Bagging helps to reduce variance and prevent overfitting.
+3. **Random Feature Selection**: At each split in a tree, a random subset of features is selected, and the best feature from this subset is used to make the split.
+
+Using multiple trees helps reducing overfitting and improving generalization. 
+
+In the **regression setting**, the prediction of the random forest is the mean of the predictions of the individual trees.
+In a **classification setting**, the prediction of the random forest is the mode of the predictions of the individual trees.
