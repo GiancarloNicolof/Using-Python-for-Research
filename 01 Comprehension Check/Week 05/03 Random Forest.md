@@ -9,7 +9,8 @@
 	**Part 2.** For regression, how does a decision tree make a prediction for a new data point?
 	> It returns the mean of the outcomes of the training data points in the predictor space where the new data point falls.
 
-- **Random forests get their name by introducing randomness to decision trees in two ways, once at the data level and once at the predictor level.**
+- **Random forests get their name by introducing randomness to decision trees in two ways, once at the data level and once at the predictor level.**  
+	
 	**Part 1.** How is randomness at the data level introduced?
 	> Each tree gets a bootstrapped random sample of training data.
 	
