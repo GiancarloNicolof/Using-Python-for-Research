@@ -19,3 +19,8 @@ The files are organized in 3 main categories:
 5. **Notes**: some notes I took during the lectures of the course.
 
 All the various quastions, homeworks and datasets are from the course ending in July 2024.
+
+**Final grades:**
+- Homework: 97%
+- Comprehension Check: 98%
+- Total grade: 83% (out of 85% since the final project is not available for auditors)
